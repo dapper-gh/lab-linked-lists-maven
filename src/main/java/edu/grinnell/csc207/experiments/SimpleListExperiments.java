@@ -279,6 +279,20 @@ public class SimpleListExperiments {
     removeBackwardExpt(pen, lst, v -> (ctr.get() % 2) == 0);
     pen.println();
   } // experiment5(PrintWriter, SimpleList<String>)
+
+    /**
+   * An experiment to test chunks of remove.
+   * @param pen Where to print a log of what happens.
+   * @param lst The list we're modifying.
+   * @throws Exception If something odd happens.
+   */
+  static void experiment6(PrintWriter pen, SimpleList<String> lst) throws Exception {
+    pen.println("Experiment 6: Removing elements in chunks.");
+    addStrings(pen, lst, new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O" });
+    Counter ctr = new Counter();
+    removeForwardExpt(pen, lst, v -> (ctr.get() % 5) < 3);
+    pen.println();
+  } // experiment5(PrintWriter, SimpleList<String>)
 } // class SimpleListExperiments
 
 /**

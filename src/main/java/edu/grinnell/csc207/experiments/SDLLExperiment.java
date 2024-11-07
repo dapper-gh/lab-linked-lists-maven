@@ -29,6 +29,7 @@ public class SDLLExperiment {
     // SimpleListExperiments.experiment1(pen, new SimpleDLL<String>());
     SimpleListExperiments.experiment4(pen, new SimpleDLL<String>(), 3);
     SimpleListExperiments.experiment5(pen, new SimpleDLL<String>());
+    SimpleListExperiments.experiment6(pen, new SimpleDLL<String>());
     pen.close();
   } // main(String[]
 } // SDLLExperiment
