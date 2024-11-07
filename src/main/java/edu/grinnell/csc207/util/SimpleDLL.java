@@ -152,7 +152,11 @@ public class SimpleDLL<T> implements SimpleList<T> {
         if (!this.hasPrevious()) {
           throw new NoSuchElementException(); // STUB
         } // if
-        return null;
+        this.next = this.prev;
+        this.prev = this.next.prev;
+        this.update = this.next;
+        this.pos--;
+        return this.next.value;
       } // previous()
 
       public void remove() {

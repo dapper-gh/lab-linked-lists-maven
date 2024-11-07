@@ -266,6 +266,19 @@ public class SimpleListExperiments {
     pen.println();
   } // experiment4(PrintWriter, SimpleList<String>, int)
 
+  /**
+   * An experiment to test previous.
+   * @param pen Where to print a log of what happens.
+   * @param lst The list we're modifying.
+   * @throws Exception If something odd happens.
+   */
+  static void experiment5(PrintWriter pen, SimpleList<String> lst) throws Exception {
+    pen.println("Experiment 5: Removing elements from the back.");
+    addStrings(pen, lst, new String[] { "A", "B", "C", "D", "E", "F", "G" });
+    Counter ctr = new Counter();
+    removeBackwardExpt(pen, lst, v -> (ctr.get() % 2) == 0);
+    pen.println();
+  } // experiment5(PrintWriter, SimpleList<String>)
 } // class SimpleListExperiments
 
 /**
